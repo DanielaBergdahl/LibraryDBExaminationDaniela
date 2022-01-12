@@ -36,7 +36,7 @@ namespace LibraryDBExaminationDaniela
             });
 
             services.AddDbContext<Context>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("LibraryDBExaminationDanielaContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("ContextConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
