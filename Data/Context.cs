@@ -12,8 +12,8 @@ namespace LibraryDBExaminationDaniela.Data
     public class Context : DbContext
     {
         public DbSet<Book> Books { get; set; } //TODO - Ändra till Book.Eller ändra de andra till plural?
-        public DbSet<Author> Author { get; set; }
-        public DbSet<Borrower> Borrower { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Borrower> Borrowers { get; set; }
         public Context(DbContextOptions<Context> options)
             : base(options)
         {

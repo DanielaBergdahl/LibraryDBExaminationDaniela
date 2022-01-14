@@ -24,14 +24,14 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> GetAuthor()
         {
-            return await _context.Author.ToListAsync();
+            return await _context.Authors.ToListAsync();
         }
 
         // GET: api/Authors/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Author>> GetAuthor(string id)
         {
-            var author = await _context.Author.FindAsync(id);
+            var author = await _context.Authors.FindAsync(id);
 
             if (author == null)
             {
@@ -77,7 +77,7 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpPost]
         public async Task<ActionResult<Author>> PostAuthor(Author author)
         {
-            _context.Author.Add(author);
+            _context.Authors.Add(author);
             try
             {
                 await _context.SaveChangesAsync();
@@ -101,13 +101,13 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAuthor(string id)
         {
-            var author = await _context.Author.FindAsync(id);
+            var author = await _context.Authors.FindAsync(id);
             if (author == null)
             {
                 return NotFound();
             }
 
-            _context.Author.Remove(author);
+            _context.Authors.Remove(author);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -115,7 +115,7 @@ namespace LibraryDBExaminationDaniela.Controllers
 
         private bool AuthorExists(int id)
         {
-            return _context.Author.Any(e => e.Id == id);
+            return _context.Authors.Any(e => e.Id == id);
         }
     }
 }
