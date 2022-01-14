@@ -44,7 +44,7 @@ namespace LibraryDBExaminationDaniela.Controllers
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBook(string id, Book book)
+        public async Task<IActionResult> PutBook(int id, Book book)
         {
             if (id != book.Id)
             {
@@ -113,7 +113,7 @@ namespace LibraryDBExaminationDaniela.Controllers
             return NoContent();
         }
 
-        private bool BookExists(string id)
+        private bool BookExists(int id)
         {
             return _context.Books.Any(e => e.Id == id);
         }
