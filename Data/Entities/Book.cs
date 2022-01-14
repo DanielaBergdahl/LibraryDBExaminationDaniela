@@ -7,8 +7,10 @@ namespace LibraryDBExaminationDaniela.Data
 {
     public class Book : BaseEntity
     {
-
+        public int Book_id { get; set; }
         public string Title { get; set; } 
-        public int MyProperty { get; set; }
+        public int Isbn { get; set; }
+        public int PublishingDate { get; set; }
+        public int Rating { get; set; }
     }
 }
