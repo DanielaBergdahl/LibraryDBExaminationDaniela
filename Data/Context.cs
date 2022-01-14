@@ -16,7 +16,10 @@ namespace LibraryDBExaminationDaniela.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Borrower> Borrowers { get; set; }
         public DbSet<Loan> Loans { get; set; } // När jag la till den här så fick jag error tills jag la till using LibraryDBExaminationDaniela.Data.Entities;
-        public Context(DbContextOptions<Context> options)
+        public DbSet<LibraryBook> LibraryBooks { get; set; }
+        public DbSet<BookAuthor> BookAuthors { get; set; }
+
+        public Context(DbContextOptions<Context> options) //vad behövs den här till?
             : base(options)
         {
         }
