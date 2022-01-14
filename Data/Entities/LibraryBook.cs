@@ -7,6 +7,9 @@ namespace LibraryDBExaminationDaniela.Data.Entities
 {
     public class LibraryBook
     {
-
+        public int Id { get; set; }
+        public int BookId { get; set; }
+        public bool Borrowed { get; set; }
+        public Book Book { get; set; }
     }
 }
