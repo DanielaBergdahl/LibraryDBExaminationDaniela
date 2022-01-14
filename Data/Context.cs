@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LibraryDBExaminationDaniela.Areas.Identity.Data;
+using LibraryDBExaminationDaniela.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,9 +12,10 @@ namespace LibraryDBExaminationDaniela.Data
 {
     public class Context : DbContext
     {
-        public DbSet<Book> Books { get; set; } //TODO - Ändra till Book.Eller ändra de andra till plural?
+        public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Borrower> Borrowers { get; set; }
+        public DbSet<Loan> Loans { get; set; } // När jag la till den här så fick jag error tills jag la till using LibraryDBExaminationDaniela.Data.Entities;
         public Context(DbContextOptions<Context> options)
             : base(options)
         {
