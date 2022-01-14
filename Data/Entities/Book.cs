@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryDBExaminationDaniela.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace LibraryDBExaminationDaniela.Data
         public int Isbn { get; set; }
         public int PublishingDate { get; set; }
         public int Rating { get; set; }
+
+        public ICollection<BookAuthor> BookAuthors { get; set; }
 
         //Funkar ej att köra programmet om jag har med constructor. Funkar bara utan 
         // och det funkar att göra POST medPostman utan constructor också.

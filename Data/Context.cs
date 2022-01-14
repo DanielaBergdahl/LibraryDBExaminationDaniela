@@ -29,6 +29,15 @@ namespace LibraryDBExaminationDaniela.Data
             modelBuilder.Entity<BookAuthor>()
                 .HasKey(sc => new { sc.BookId, sc.AuthorId });
 
+            modelBuilder.Entity<BookAuthor>()
+                .HasOne(sc => sc.Book)
+                .WithMany(s => s.BookAuthors)
+                .HasForeignKey(sc => sc.BookId);
+
+            modelBuilder.Entity<BookAuthor>()
+                .HasOne(sc => sc.Author)
+                .WithMany(c => c.BookAuthors)
+                .HasForeignKey(sc => sc.AuthorId);
 
             //base.OnModelCreating(builder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
