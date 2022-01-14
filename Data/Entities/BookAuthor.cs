@@ -7,6 +7,8 @@ namespace LibraryDBExaminationDaniela.Data.Entities
 {
     public class BookAuthor
     {
+        //TODO - The entity type 'BookAuthor' requires a primary key to be defined.
+        //Ska nog göras i Context.
         public int BookId { get; set; }
         public int AuthorId { get; set; }
         public Book Book { get; set; }
