@@ -29,9 +29,14 @@ namespace LibraryDBExaminationDaniela.Controllers
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(string id)
+        public async Task<ActionResult<Book>> GetBook(int id)
         {
-            var book = await _context.Books.FindAsync(id);
+            //var book = await _context.Books.FindAsync(id);
+
+            var book = await _context.Books
+                .Include(ba => ba.BookAuthors)
+                .ThenInclude(ba => ba.Author)
+                .FirstOrDefaultAsync(b => b.Id == id);
 
             if (book == null)
             {

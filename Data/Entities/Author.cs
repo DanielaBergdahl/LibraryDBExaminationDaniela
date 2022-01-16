@@ -14,6 +14,6 @@ namespace LibraryDBExaminationDaniela.Data
 
         public ICollection<BookAuthor> BookAuthors { get; set; }
 
-        //TODO - lägg till list of Book books. Det är ett relationship.
+        //TODO - lägg till list of Book books. Det är ett relationship. KANSKE vi får se
     }
 }
