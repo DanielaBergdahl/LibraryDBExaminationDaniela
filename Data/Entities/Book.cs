@@ -22,8 +22,6 @@ namespace LibraryDBExaminationDaniela.Data
         {
 
         }
-        //Funkar ej att köra programmet om jag har med constructor. Funkar bara utan 
-        // och det funkar att göra POST medPostman utan constructor också.
         public Book(string title, int isbn, DateTime publishingDate, int rating)
         {
             Title = title;
