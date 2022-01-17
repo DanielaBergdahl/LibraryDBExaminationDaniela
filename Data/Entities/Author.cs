@@ -9,23 +9,23 @@ namespace LibraryDBExaminationDaniela.Data
 {
     public class Author
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
         public ICollection<BookAuthor> BookAuthors { get; set; }
 
-        public Author()
-        {
+        //public Author()
+        //{
 
-        }
+        //}
 
-        public Author(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-        }
+        //public Author(string firstName, string lastName)
+        //{
+        //    FirstName = firstName;
+        //    LastName = lastName;
+        //}
         //TODO - kanske lägg till list of Book books. Det är ett relationship.
     }
 }

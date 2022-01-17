@@ -9,7 +9,7 @@ namespace LibraryDBExaminationDaniela.Data
 {
     public class Book
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
         public string Title { get; set; } 
         public int Isbn { get; set; }
@@ -18,16 +18,16 @@ namespace LibraryDBExaminationDaniela.Data
 
         public ICollection<BookAuthor> BookAuthors { get; set; }
 
-        public Book()
-        {
+        //public Book()
+        //{
 
-        }
-        public Book(string title, int isbn, DateTime publishingDate, int rating)
-        {
-            Title = title;
-            Isbn = isbn;
-            PublishingDate = publishingDate;
-            Rating = rating;
-        }
+        //}
+        //public Book(string title, int isbn, DateTime publishingDate, int rating)
+        //{
+        //    Title = title;
+        //    Isbn = isbn;
+        //    PublishingDate = publishingDate;
+        //    Rating = rating;
+        //}
     }
 }
