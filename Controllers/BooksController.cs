@@ -82,7 +82,8 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
         {
-            _context.Books.Add(book);
+            Book newBook = new Book(book.Title, book.Isbn, book.PublishingDate, book.Rating); 
+            _context.Books.Add(newBook);
             try
             {
                 await _context.SaveChangesAsync();
