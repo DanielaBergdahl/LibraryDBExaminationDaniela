@@ -104,7 +104,7 @@ namespace LibraryDBExaminationDaniela.Controllers
 
         // DELETE: api/Authors/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAuthor(string id)
+        public async Task<IActionResult> DeleteAuthor(int id)
         {
             var author = await _context.Authors.FindAsync(id);
             if (author == null)
