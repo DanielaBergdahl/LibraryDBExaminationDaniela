@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryDBExaminationDaniela.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220117100052_init")]
-    partial class init
+    [Migration("20220118130853_bookint")]
+    partial class bookint
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,8 +49,8 @@ namespace LibraryDBExaminationDaniela.Migrations
                     b.Property<int>("Isbn")
                         .HasColumnType("int");
 
-                    b.Property<int>("PublishingDate")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("PublishingDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
@@ -126,10 +126,10 @@ namespace LibraryDBExaminationDaniela.Migrations
                     b.Property<int>("BorrowerId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateBorrowed")
+                    b.Property<DateTime?>("DateBorrowed")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateReturned")
+                    b.Property<DateTime?>("DateReturned")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("LibraryBookId")

@@ -29,7 +29,7 @@ namespace LibraryDBExaminationDaniela.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Isbn = table.Column<int>(type: "int", nullable: false),
-                    PublishingDate = table.Column<int>(type: "int", nullable: false),
+                    PublishingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Rating = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -101,8 +101,8 @@ namespace LibraryDBExaminationDaniela.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DateBorrowed = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateReturned = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateBorrowed = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateReturned = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LibraryBookId = table.Column<int>(type: "int", nullable: false),
                     BorrowerId = table.Column<int>(type: "int", nullable: false)
                 },
