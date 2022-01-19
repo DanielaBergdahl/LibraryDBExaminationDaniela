@@ -82,7 +82,6 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
         {
-            //Book newBook = new Book(book.Title, book.Isbn, book.PublishingDate, book.Rating); 
             _context.Books.Add(book);
             try
             {
@@ -105,7 +104,7 @@ namespace LibraryDBExaminationDaniela.Controllers
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBook(int id)//byter från string till int id
+        public async Task<IActionResult> DeleteBook(int id)
         {
             var book = await _context.Books.FindAsync(id);
             if (book == null)

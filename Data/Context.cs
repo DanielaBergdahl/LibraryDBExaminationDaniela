@@ -15,11 +15,11 @@ namespace LibraryDBExaminationDaniela.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Borrower> Borrowers { get; set; }
-        public DbSet<Loan> Loans { get; set; } // När jag la till den här så fick jag error tills jag la till using LibraryDBExaminationDaniela.Data.Entities;
+        public DbSet<Loan> Loans { get; set; }
         public DbSet<LibraryBook> LibraryBooks { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
 
-        public Context(DbContextOptions<Context> options) //vad behövs den här till?
+        public Context(DbContextOptions<Context> options)
             : base(options)
         {
         }
@@ -38,11 +38,6 @@ namespace LibraryDBExaminationDaniela.Data
                 .HasOne(sc => sc.Author)
                 .WithMany(c => c.BookAuthors)
                 .HasForeignKey(sc => sc.AuthorId);
-
-            //base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
         }
     }
 }

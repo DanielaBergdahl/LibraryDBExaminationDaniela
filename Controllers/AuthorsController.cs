@@ -31,8 +31,6 @@ namespace LibraryDBExaminationDaniela.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Author>> GetAuthor(int id)
         {
-            //var author = await _context.Authors.FindAsync(id);
-
             var author = await _context.Authors
                 .Include(ba => ba.BookAuthors)
                 .ThenInclude(ba => ba.Book)

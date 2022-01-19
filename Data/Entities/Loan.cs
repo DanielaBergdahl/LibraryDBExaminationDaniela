@@ -8,7 +8,6 @@ namespace LibraryDBExaminationDaniela.Data.Entities
     public class Loan
     {
         public int Id { get; set; }
-
         public Nullable<DateTime> DateBorrowed { get; set; }
         public Nullable<DateTime> DateReturned { get; set; }
         public int LibraryBookId { get; set; }

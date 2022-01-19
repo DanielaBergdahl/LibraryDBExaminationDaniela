@@ -7,19 +7,9 @@ namespace LibraryDBExaminationDaniela.Data
 {
     public class Borrower
     {
-        public int Id { get; set; } //lånekortsnumret
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        //public Borrower()
-        //{
-
-        //}
-        //public Borrower(string firstName, string lastName)
-        //{
-        //    FirstName = firstName;
-        //    LastName = lastName;
-        //}
     }
 
 
